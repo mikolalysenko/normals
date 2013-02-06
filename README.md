@@ -1,4 +1,4 @@
 normals
 =======
+Computes normals for triangulated meshes.  
 
-Computes normals for triangulated meshes

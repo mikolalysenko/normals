@@ -1,6 +1,6 @@
 normals
 =======
-Estimates normals for triangulated meshes.
+Estimates normals for surface meshes.
 
 Installation
 ============
@@ -16,7 +16,7 @@ Here is how to compute the vertex and face normals for the Stanford bunny:
     var bunny.vertexNormals = require("normals").vertexNormals(bunny.positions, bunny.faces);
     var bunny.faceNormals = require("normals").faceNormals(bunny.positions, bunny.faces);
 
-`require("normals").vertexNormals(positions, faces)`
+`require("normals").vertexNormals(cells, positions)`
 ----------------------------------------------------
 This estimates the vertex normals for an oriented mesh.
 
@@ -26,7 +26,7 @@ This estimates the vertex normals for an oriented mesh.
 Returns: An array of length = `positions.length` of the per-vertex normals.
 
 
-`require("normals").faceNormals(positions, faces)`
+`require("normals").faceNormals(cells, positions)`
 ----------------------------------------------------
 This estimates the face normals for an oriented mesh.
 

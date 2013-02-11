@@ -1,7 +1,7 @@
 var EPSILON = 1e-6;
 
 //Estimate the vertex normals of a mesh
-exports.vertexNormals = function(positions, faces) {
+exports.vertexNormals = function(faces, positions) {
   
   var N         = positions.length;
   var normals   = new Array(N);
@@ -77,7 +77,7 @@ exports.vertexNormals = function(positions, faces) {
 }
 
 //Compute face normals of a mesh
-exports.faceNormals = function(positions, faces) {
+exports.faceNormals = function(faces, positions) {
   var N         = faces.length;
   var normals   = new Array(N);
   

@@ -13,15 +13,15 @@ Example
 Here is how to compute the vertex and face normals for the Stanford bunny:
 
     var bunny = require("bunny");
-    var bunny.vertexNormals = require("normals").vertexNormals(bunny.positions, bunny.faces);
-    var bunny.faceNormals = require("normals").faceNormals(bunny.positions, bunny.faces);
+    var bunny.vertexNormals = require("normals").vertexNormals(bunny.cells, bunny.positions);
+    var bunny.faceNormals = require("normals").faceNormals(bunny.cells, bunny.positions);
 
 `require("normals").vertexNormals(cells, positions)`
 ----------------------------------------------------
 This estimates the vertex normals for an oriented mesh.
 
+* `cells` is an array of indexed vertex positions
 * `positions` is an array of vertex positions
-* `faces` is an array of indexed vertex positions
 
 Returns: An array of length = `positions.length` of the per-vertex normals.
 
@@ -30,10 +30,10 @@ Returns: An array of length = `positions.length` of the per-vertex normals.
 ----------------------------------------------------
 This estimates the face normals for an oriented mesh.
 
+* `cells` is an array of indexed vertex positions
 * `positions` is an array of vertex positions
-* `faces` is an array of indexed vertex positions
 
-Returns: An array of length = `faces.length` of the per-face normals.
+Returns: An array of length = `cells.length` of the per-face normals.
 
 
 Credits

@@ -12,9 +12,11 @@ Example
 =======
 Here is how to compute the vertex and face normals for the Stanford bunny:
 
+```js
     var bunny = require("bunny");
-    var bunny.vertexNormals = require("normals").vertexNormals(bunny.cells, bunny.positions);
-    var bunny.faceNormals = require("normals").faceNormals(bunny.cells, bunny.positions);
+    bunny.vertexNormals = require("normals").vertexNormals(bunny.cells, bunny.positions);
+    bunny.faceNormals = require("normals").faceNormals(bunny.cells, bunny.positions);
+```
 
 `require("normals").vertexNormals(cells, positions)`
 ----------------------------------------------------

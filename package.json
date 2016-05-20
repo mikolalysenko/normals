@@ -1,6 +1,6 @@
 {
   "name": "normals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Estimates normals for meshes",
   "main": "normals.js",
   "repository": {

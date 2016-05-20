@@ -14,11 +14,11 @@ Here is how to compute the vertex and face normals for the Stanford bunny:
 
 ```js
     var bunny = require("bunny");
-    bunny.vertexNormals = require("normals").vertexNormals(bunny.cells, bunny.positions);
-    bunny.faceNormals = require("normals").faceNormals(bunny.cells, bunny.positions);
+    bunny.vertexNormals = require("normals").vertexNormals(bunny.cells, bunny.positions[,epsilon]);
+    bunny.faceNormals = require("normals").faceNormals(bunny.cells, bunny.positions[,epsilon]);
 ```
 
-`require("normals").vertexNormals(cells, positions)`
+`require("normals").vertexNormals(cells, positions[,epsilon])`
 ----------------------------------------------------
 This estimates the vertex normals for an oriented mesh.
 
@@ -28,7 +28,7 @@ This estimates the vertex normals for an oriented mesh.
 Returns: An array of length = `positions.length` of the per-vertex normals.
 
 
-`require("normals").faceNormals(cells, positions)`
+`require("normals").faceNormals(cells, positions[,epsilon])`
 ----------------------------------------------------
 This estimates the face normals for an oriented mesh.
 
